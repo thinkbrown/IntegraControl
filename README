@@ -1,33 +1,20 @@
-Onkyo TX-NR708 Control
-=================================
+Integra Control
+==========================
 
-Library to control Onkyo TX-NR708 Receivers over Ethernet
+Software to control an Integra DTR-7.8 from a PC with Python, or a mobile device
 
+Requirements
+==========================
+- Python 2.6+
+- Tkinter
 
-Status:
-======
-- Mostly feature complete. Full command set probably isn't here -- I haven't 
-  been able to track down a comprehensive guide online anywhere.
-- Discrete volume control isn't here yet.
+References
+==========================
+Thanks To:
+Will Nowak for his Onkyo-TX-NR708-Control project. I modified his python code for lower latency.
 
+Ken Shirriff for his project on controlling his stereo via the web. He didn't include a license for the code, but it was provided on his website without any restrictions (http://www.arcfn.com/2009/11/controlling-your-stereo-over-web-with.html)
 
-Requirements:
-=============
-- Python 2.4+
-
-References:
-===========
-I poked around on the net and found other people who had tried to write similar
-control software.
-
--- This code in PHP was really helpful in figuring out what I wanted to do in
-python. 
- http://www.avforums.com/forums/onkyo-products/1107346-onkyo-tx-nr-1007-webinterface-programming.html
-
--- This was a pre-built utility that I didn't get a ton of useful information
-out of.
- http://www.avsforum.com/avs-vb/showthread.php?t=1031993
-
-License:
-========
-see LICENSE
+License
+==========================
+See LICENSE
