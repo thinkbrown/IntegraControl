@@ -10,7 +10,7 @@ import eiscp
 
 from BaseHTTPServer import HTTPServer
 from SimpleHTTPServer import SimpleHTTPRequestHandler
-receiver = eiscp.eISCP('10.0.1.41', 60128)
+receiver = eiscp.eISCP('10.0.1.2', 60128)
 receiver.connectSocket()
 # The web server.
 class MyHandler(SimpleHTTPRequestHandler):

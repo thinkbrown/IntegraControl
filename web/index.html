@@ -9,26 +9,6 @@
     <link rel="apple-touch-startup-image" href="img/startup.png" />
 
     <title>Integra</title>
-<script>
-function button(value) {
-  if (window.XMLHttpRequest) {
-   request = new XMLHttpRequest();
-  } else if (window.ActiveXObject) {
-    try {
-      request = new ActiveXObject("Msxml2.XMLHTTP");
-    } catch (e) {
-      try {
-        request = new ActiveXObject("Microsoft.XMLHTTP");
-      } catch (e) {}
-    }
-  }
-  request.open('POST', '/control', true);
-  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  request.setRequestHeader('Content-length', value.length);
-  request.setRequestHeader('Connection', 'close');
-  request.send('code=' + value);
-}
-</script>
 <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 <style>
 body {background-color:#000000; color:#FFFFFF}
@@ -45,55 +25,8 @@ a:active {color:#FFFFFF;}
 </head>
 <body>
 <center>
-<p><h1>Main Zone:</h1></p>
-<form name="remoteform" method="post">
-<input type="hidden" name="code">
-<img src="img/off.png" onClick="button('Power OFF')" >
-<img src="img/on.png" onClick="button('Power ON')" >
-<br />
-<div style="width: auto; margin-left: auto; margin-right: auto;">
-<img src="img/voldown.png" onClick="button('Volume Down')" >
-<img src="img/mute.png" onClick="button('MuteToggle')" >
-<img src="img/volup.png" onClick="button('Volume Up')" >
+<a href="main.html"><h1>Main Zone</h1></a>
+<a href="zone2.html"><h1>Zone 2</h1></a>
 </center>
-</form>
-<div style="width: 100%; float: left; margin-left: auto; margin-right: auto; text-align: center;">
-<form method="post">
-<input type="hidden" name="code">
-<p>Source:</p>
-<select onChange="button(value)">
-  <option value="DVD">DVD</option>
-  <option value="VCR/DVR">VCR</option>
-  <option value="CBL/SAT">Cable</option>
-  <option value="Game">Game</option>
-  <option value="AUX1">AUX1</option>
-  <option value="AUX2">AUX2</option>
-  <option value="Tape">Tape</option>
-  <option value="AM">AM</option>
-  <option value="FM">FM</option>
-  <option value="CD">CD</option>
-  <option value="Phono">Phono</option>
-</select>
-</form>
-
-<form method="post">
-<input type="hidden" name="code">
-<p>Surround Mode:</p>
-<select onChange="button(value)">
-  <option value="STEREO">Stereo</option>
-  <option value="DIRECT">Direct</option>
-  <option value="ALL CH STEREO">All Channel Stereo</option>
-  <option value="5.1ch Surround">Digital 5.1</option>
-  <option value="PLII/PLIIx Movie">PLIIx Movie</option>
-  <option value="PLII/PLIIx Music">PLIIx Music</option>
-  <option value="PLII/PLIIx Game">PLIIx Game</option>
-  <option value="Neo6 Cinema">Neo:6 Cinema</option>
-  <option value="Neo6 Music">Neo:6 Music</option>
-</select>
-</form>
-<div style="position: absolute; bottom: 0; text-align: center; width: 99%">
-<a href="index.html">Main Zone</a>
-<a href="zone2.html">Zone 2</a>
-</div>
 </body>
 </html>

@@ -1,0 +1,208 @@
+<html manifest="./cache_manifest.cfm">
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="img/logo.png"/>
+
+    <link rel="apple-touch-startup-image" href="img/startup.png" />
+
+    <title>Integra</title>
+<script>
+function button(value) {
+  if (window.XMLHttpRequest) {
+   request = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    try {
+      request = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+      try {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (e) {}
+    }
+  }
+  request.open('POST', '/control', true);
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  request.setRequestHeader('Content-length', value.length);
+  request.setRequestHeader('Connection', 'close');
+  request.send('code=' + value);
+}
+</script>
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+<style>
+body {background-color:#000000; color:#FFFFFF}
+a:link {color:#FFFFFF;}      /* unvisited link */
+a:visited {color:#FFFFFF;}  /* visited link */
+a:hover {color:#FFFFFF;}  /* mouse over link */
+a:active {color:#FFFFFF;}
+<!—-
+    * {
+        -webkit-touch-callout: none;
+    }
+-->
+</style>
+</head>
+<body>
+<center>
+<p><h1>Main Zone:</h1></p>
+<form name="remoteform" method="post">
+<input type="hidden" name="code">
+<img src="img/off.png" onClick="button('Power OFF')" >
+<img src="img/on.png" onClick="button('Power ON')" >
+<br />
+<div style="width: auto; margin-left: auto; margin-right: auto;">
+<img src="img/voldown.png" onClick="button('Volume Down')" >
+<img src="img/mute.png" onClick="button('MuteToggle')" >
+<img src="img/volup.png" onClick="button('Volume Up')" >
+</center>
+</form>
+<div style="width: 100%; float: left; margin-left: auto; margin-right: auto; text-align: center;">
+
+<form method="post">
+<input type="hidden" name="code">
+<p>Volume Level:</p>
+<select onChange="button(value)">
+  <option value="MainVol00">Mute</option>
+  <option value="MainVol01">-81db</option>
+  <option value="MainVol02">-80db</option>
+  <option value="MainVol03">-79db</option>
+  <option value="MainVol04">-78db</option>
+  <option value="MainVol05">-77db</option>
+  <option value="MainVol06">-76db</option>
+  <option value="MainVol07">-75db</option>
+  <option value="MainVol08">-74db</option>
+  <option value="MainVol09">-73db</option>
+  <option value="MainVol0A">-72db</option>
+  <option value="MainVol0B">-71db</option>
+  <option value="MainVol0C">-70db</option>
+  <option value="MainVol0D">-69db</option>
+  <option value="MainVol0E">-68db</option>
+  <option value="MainVol0F">-67db</option>
+  <option value="MainVol10">-66db</option>
+  <option value="MainVol11">-65db</option>
+  <option value="MainVol12">-64db</option>
+  <option value="MainVol13">-63db</option>
+  <option value="MainVol14">-62db</option>
+  <option value="MainVol15">-61db</option>
+  <option value="MainVol16">-60db</option>
+  <option value="MainVol17">-59db</option>
+  <option value="MainVol18">-58db</option>
+  <option value="MainVol19">-57db</option>
+  <option value="MainVol1A">-56db</option>
+  <option value="MainVol1B">-55db</option>
+  <option value="MainVol1C">-54db</option>
+  <option value="MainVol1D">-53db</option>
+  <option value="MainVol1E">-52db</option>
+  <option value="MainVol1F">-51db</option>
+  <option value="MainVol20">-50db</option>
+  <option value="MainVol21">-49db</option>
+  <option value="MainVol22">-48db</option>
+  <option value="MainVol23">-47db</option>
+  <option value="MainVol24">-46db</option>
+  <option value="MainVol25">-45db</option>
+  <option value="MainVol26">-44db</option>
+  <option value="MainVol27">-43db</option>
+  <option value="MainVol28">-42db</option>
+  <option value="MainVol29">-41db</option>
+  <option value="MainVol2A">-40db</option>
+  <option value="MainVol2B">-39db</option>
+  <option value="MainVol2C">-38db</option>
+  <option value="MainVol2D">-37db</option>
+  <option value="MainVol2E">-36db</option>
+  <option value="MainVol2F">-35db</option>
+  <option value="MainVol30">-34db</option>
+  <option value="MainVol31">-33db</option>
+  <option value="MainVol32">-32db</option>
+  <option value="MainVol33">-31db</option>
+  <option value="MainVol34">-30db</option>
+  <option value="MainVol35">-29db</option>
+  <option value="MainVol36">-28db</option>
+  <option value="MainVol37">-27db</option>
+  <option value="MainVol38">-26db</option>
+  <option value="MainVol39">-25db</option>
+  <option value="MainVol3A">-24db</option>
+  <option value="MainVol3B">-23db</option>
+  <option value="MainVol3C">-22db</option>
+  <option value="MainVol3D">-21db</option>
+  <option value="MainVol3E">-20db</option>
+  <option value="MainVol3F">-19db</option>
+  <option value="MainVol40">-18db</option>
+  <option value="MainVol41">-17db</option>
+  <option value="MainVol42">-16db</option>
+  <option value="MainVol43">-15db</option>
+  <option value="MainVol44">-14db</option>
+  <option value="MainVol45">-13db</option>
+  <option value="MainVol46">-12db</option>
+  <option value="MainVol47">-11db</option>
+  <option value="MainVol48">-10db</option>
+  <option value="MainVol49">-09db</option>
+  <option value="MainVol4A">-08db</option>
+  <option value="MainVol4B">-07db</option>
+  <option value="MainVol4C">-06db</option>
+  <option value="MainVol4D">-05db</option>
+  <option value="MainVol4E">-04db</option>
+  <option value="MainVol4F">-03db</option>
+  <option value="MainVol50">-02db</option>
+  <option value="MainVol51">-01db</option>
+  <option value="MainVol52">00db</option>
+  <option value="MainVol53">+01db</option>
+  <option value="MainVol54">+02db</option>
+  <option value="MainVol55">+03db</option>
+  <option value="MainVol56">+04db</option>
+  <option value="MainVol57">+05db</option>
+  <option value="MainVol58">+06db</option>
+  <option value="MainVol59">+07db</option>
+  <option value="MainVol5A">+08db</option>
+  <option value="MainVol5B">+09db</option>
+  <option value="MainVol5C">+10db</option>
+  <option value="MainVol5D">+11db</option>
+  <option value="MainVol5E">+12db</option>
+  <option value="MainVol5F">+13db</option>
+  <option value="MainVol60">+14db</option>
+  <option value="MainVol61">+15db</option>
+  <option value="MainVol62">+16db</option>
+  <option value="MainVol63">+17db</option>
+  <option value="MainVol64">+18db</option>
+</select>
+</form>
+
+<form method="post">
+<input type="hidden" name="code">
+<p>Source:</p>
+<select onChange="button(value)">
+  <option value="DVD">DVD</option>
+  <option value="VCR/DVR">VCR</option>
+  <option value="CBL/SAT">Cable</option>
+  <option value="Game">Game</option>
+  <option value="AUX1">AUX1</option>
+  <option value="AUX2">AUX2</option>
+  <option value="Tape">Tape</option>
+  <option value="AM">AM</option>
+  <option value="FM">FM</option>
+  <option value="CD">CD</option>
+  <option value="Phono">Phono</option>
+</select>
+</form>
+
+<form method="post">
+<input type="hidden" name="code">
+<p>Surround Mode:</p>
+<select onChange="button(value)">
+  <option value="STEREO">Stereo</option>
+  <option value="DIRECT">Direct</option>
+  <option value="ALL CH STEREO">All Channel Stereo</option>
+  <option value="5.1ch Surround">Digital 5.1</option>
+  <option value="PLII/PLIIx Movie">PLIIx Movie</option>
+  <option value="PLII/PLIIx Music">PLIIx Music</option>
+  <option value="PLII/PLIIx Game">PLIIx Game</option>
+  <option value="Neo6 Cinema">Neo:6 Cinema</option>
+  <option value="Neo6 Music">Neo:6 Music</option>
+</select>
+</form>
+<div style="position: absolute; bottom: 0; text-align: center; width: 99%">
+<a href="index.html">Main Zone</a>
+<a href="zone2.html">Zone 2</a>
+</div>
+</body>
+</html>
