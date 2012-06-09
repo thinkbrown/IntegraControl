@@ -1,0 +1,84 @@
+<html manifest="./cache_manifest.cfm">
+<head>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="img/logo.png"/>
+
+    <link rel="apple-touch-startup-image" href="img/startup.png" />
+
+    <title>Integra</title>
+<script>
+function button(value) {
+  if (window.XMLHttpRequest) {
+   request = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    try {
+      request = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+      try {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (e) {}
+    }
+  }
+  request.open('POST', '/control', true);
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  request.setRequestHeader('Content-length', value.length);
+  request.setRequestHeader('Connection', 'close');
+  request.send('code=' + value);
+}
+</script>
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+<style>
+body {background-color:#000000; color:#FFFFFF}
+a:link {color:#FFFFFF;}      /* unvisited link */
+a:visited {color:#FFFFFF;}  /* visited link */
+a:hover {color:#FFFFFF;}  /* mouse over link */
+a:active {color:#FFFFFF;}
+<!—-
+    * {
+        -webkit-touch-callout: none;
+    }
+-->
+</style>
+</head>
+<body>
+<center>
+<p><h1>Zone 2:</h1></p>
+<form name="remoteform" method="post">
+<input type="hidden" name="code">
+<img src="img/off.png" onClick="button('Z2OFF')" >
+<img src="img/on.png" onClick="button('Z2ON')" >
+<br />
+<div style="width: auto; margin-left: auto; margin-right: auto;">
+<img src="img/voldown.png" onClick="button('Z2VOLDOWN')" >
+<img src="img/mute.png" onClick="button('Z2Mute')" >
+<img src="img/volup.png" onClick="button('Z2VOLUP')" >
+</center>
+</form>
+<div style="width: 100%; float: left; margin-left: auto; margin-right: auto; text-align: center;">
+<form method="post">
+<input type="hidden" name="code">
+<p>Source:</p>
+<select onChange="button(value)">
+  <option value="z2DVD">DVD</option>
+  <option value="z2VCR/DVR">VCR</option>
+  <option value="z2CBL/SAT">Cable</option>
+  <option value="z2Game">Game</option>
+  <option value="z2AUX1">AUX1</option>
+  <option value="z2AUX2">AUX2</option>
+  <option value="z2Tape">Tape</option>
+  <option value="z2AM">AM</option>
+  <option value="z2FM">FM</option>
+  <option value="z2CD">CD</option>
+  <option value="z2Phono">Phono</option>
+</select>
+</form>
+<div style="position: absolute; bottom: 0; text-align: center; width: 99%">
+<a href="index.html">Main Zone</a>
+<a href="zone2.html">Zone 2</a>
+</div>
+</body>
+</html>
