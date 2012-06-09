@@ -8,6 +8,18 @@ Requirements
 - Python 2.6+
 - Tkinter
 
+Instructions
+==========================
+For PC Control:
+Edit controller.py with the proper IP and Port of your receiver
+Execute controller.py in the main directory
+
+For iPhone/iPod Touch Control:
+Edit web/server.py with the proper IP and Port of your receiver
+execute server.py within the web directory
+Connect to your computer on port 8080
+Add to Homescreen
+
 References
 ==========================
 Thanks To:
